@@ -1,14 +1,12 @@
-// Copyright © 2016 Alan A. A. Donovan & Brian W. Kernighan.
-// License: https://creativecommons.org/licenses/by-nc-sa/4.0/
-
-// See page 229.
-
-// Pipeline2 demonstrates a finite 3-stage pipeline.
 package main
 
 import "fmt"
 
-//!+
+/*
+	100개까지 돌고 naturals 채널을 닫는다.
+	전달 하는 Squarer 고루틴을 그 개수 만큰 일고 squares 채널을 닫는다.
+	프린터 하는 루프는 버퍼에 있는 값까지 앍고 끝난다.
+*/
 func main() {
 	naturals := make(chan int)
 	squares := make(chan int)
@@ -34,5 +32,3 @@ func main() {
 		fmt.Println(x)
 	}
 }
-
-//!-

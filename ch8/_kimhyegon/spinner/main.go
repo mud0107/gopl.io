@@ -14,6 +14,8 @@ import (
 		동시성은 코드이고 병렬성의 실제 물리적이 코어에 실행된는 것
 */
 
+// 샐행방법 : go run main.go
+
 func main() {
 	go spinner(100 * time.Millisecond)
 	const n = 45

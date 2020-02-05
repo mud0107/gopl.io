@@ -7,11 +7,9 @@ import (
 	"time"
 )
 
-// 실행방버
 // go build main
 // ./main &
 // nc localhost:8000
-
 func main() {
 	listener, err := net.Listen("tcp", "localhost:8000")
 	if err != nil {
@@ -24,7 +22,7 @@ func main() {
 			log.Print(err)
 			continue
 		}
-		handleConn(conn)
+		go handleConn(conn) // clock1과의 차이점
 	}
 }
 
